@@ -14,7 +14,7 @@ export default function BlogPage() {
       <Header />
 
       {/* Page Header */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
+      <section className="bg-linear-to-r from-blue-600 to-purple-600 text-white py-16">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center">
             <h1 className="text-5xl font-bold mb-4">Our Blog</h1>
@@ -26,7 +26,7 @@ export default function BlogPage() {
       </section>
 
       {/* Blog Posts Section */}
-      <section className="py-16 flex-grow">
+      <section className="py-16 grow">
         <div className="max-w-7xl mx-auto px-6">
           {/* Blog Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
