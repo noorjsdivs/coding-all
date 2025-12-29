@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TechBlog - Your Daily Dose of Tech</title>
+    <title>Blog - TechBlog</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,7 +13,7 @@
       rel="stylesheet"
     />
   </head>
-  <body class="font-['Poppins']">
+  <body class="font-['Poppins'] bg-gray-50">
     <!-- Header -->
     <header class="bg-white shadow-md sticky top-0 z-50">
       <nav class="max-w-7xl mx-auto px-6 py-4">
@@ -47,21 +47,16 @@
       </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero-gradient text-white py-20">
+    <!-- Page Header -->
+    <section
+      class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16"
+    >
       <div class="max-w-7xl mx-auto px-6">
-        <div class="max-w-3xl mx-auto text-center">
-          <h1 class="text-5xl font-bold mb-6">Welcome to TechBlog</h1>
-          <p class="text-xl mb-8 text-gray-100">
-            Discover the latest insights, tutorials, and trends in technology.
-            Your journey to tech excellence starts here.
+        <div class="text-center">
+          <h1 class="text-5xl font-bold mb-4">Our Blog</h1>
+          <p class="text-xl text-gray-100">
+            Explore our latest articles, tutorials, and insights
           </p>
-          <a
-            href="blog.html"
-            class="inline-block bg-white text-purple-600 font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors shadow-lg"
-          >
-            Explore Articles
-          </a>
         </div>
       </div>
     </section>
@@ -69,14 +64,9 @@
     <!-- Blog Posts Section -->
     <section class="py-16">
       <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center mb-12">
-          <h2 class="text-4xl font-bold text-gray-800 mb-4">Latest Articles</h2>
-          <p class="text-gray-600 text-lg">Check out our most recent posts</p>
-        </div>
-
         <!-- Blog Grid -->
         <div
-          id="blog-grid"
+          id="all-blogs-grid"
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <!-- Blog cards will be inserted here by JavaScript -->
