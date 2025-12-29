@@ -1,25 +1,23 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import App from "./App.tsx";
-import { createBrowserRouter } from "react-router";
-import { RouterProvider } from "react-router/dom";
-import BlogPage from "./pages/BlogPage.tsx";
+import { createBrowserRouter, RouterProvider } from "react-router";
+import HomePage from "./pages/HomePage";
+import BlogListPage from "./pages/BlogListPage";
+import BlogPostPage from "./pages/BlogPostPage";
+
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
-    children: [
-      {
-        path: "/",
-        element: <App />,
-        index: true,
-      },
-      {
-        path: "/blog",
-        element: <BlogPage />,
-      },
-    ],
+    element: <HomePage />,
+  },
+  {
+    path: "/blog",
+    element: <BlogListPage />,
+  },
+  {
+    path: "/blog/:slug",
+    element: <BlogPostPage />,
   },
 ]);
 
