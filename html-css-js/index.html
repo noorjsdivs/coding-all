@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechBlog - Your Daily Dose of Tech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+PE+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="font-['Poppins']">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <nav class="max-w-7xl mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <div class="flex items-center space-x-2">
+            <div
+              class="w-10 h-10 bg-linear-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center"
+            >
+              <span class="text-white font-bold text-xl">TB</span>
+            </div>
+            <span class="text-2xl font-bold text-gray-800">TechBlog</span>
+          </div>
+
+          <!-- Navigation -->
+          <div class="flex items-center space-x-8">
+            <a
+              href="/"
+              class="nav-link text-gray-700 font-medium hover:text-blue-600 transition-colors"
+              >Home</a
+            >
+            <a
+              href="/blog"
+              class="nav-link text-gray-700 font-medium hover:text-blue-600 transition-colors"
+              >Blog</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-3xl mx-auto text-center">
+          <h1 class="text-5xl font-bold mb-6">Welcome to TechBlog</h1>
+          <p class="text-xl mb-8 text-gray-100">
+            Discover the latest insights, tutorials, and trends in technology.
+            Your journey to tech excellence starts here.
+          </p>
+          <a
+            href="/blog"
+            class="inline-block bg-white text-purple-600 font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors shadow-lg"
+          >
+            Explore Articles
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Posts Section -->
+    <section class="py-16">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-gray-800 mb-4">Latest Articles</h2>
+          <p class="text-gray-600 text-lg">Check out our most recent posts</p>
+        </div>
+
+        <!-- Blog Grid -->
+        <div
+          id="blog-grid"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <!-- Blog cards will be inserted here by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <p class="text-gray-400">&copy; 2025 TechBlog. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Dummy blog posts data
+      const blogPosts = [
+        {
+          slug: "getting-started-with-react",
+          title: "Getting Started with React",
+          excerpt:
+            "Learn the fundamentals of React and build your first component-based application.",
+          image:
+            "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=500&h=300&fit=crop",
+          date: "Dec 25, 2025",
+          readTime: "5 min read",
+          category: "Frontend",
+        },
+        {
+          slug: "mastering-css-grid",
+          title: "Mastering CSS Grid Layout",
+          excerpt:
+            "Dive deep into CSS Grid and create responsive layouts with ease.",
+          image:
+            "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?w=500&h=300&fit=crop",
+          date: "Dec 23, 2025",
+          readTime: "7 min read",
+          category: "CSS",
+        },
+        {
+          slug: "javascript-async-await",
+          title: "JavaScript Async/Await Explained",
+          excerpt:
+            "Master asynchronous JavaScript with async/await and promises.",
+          image:
+            "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?w=500&h=300&fit=crop",
+          date: "Dec 20, 2025",
+          readTime: "6 min read",
+          category: "JavaScript",
+        },
+        {
+          slug: "nodejs-rest-api",
+          title: "Building REST APIs with Node.js",
+          excerpt:
+            "Create scalable and efficient REST APIs using Node.js and Express.",
+          image:
+            "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500&h=300&fit=crop",
+          date: "Dec 18, 2025",
+          readTime: "8 min read",
+          category: "Backend",
+        },
+        {
+          slug: "typescript-beginners-guide",
+          title: "TypeScript: A Beginner's Guide",
+          excerpt:
+            "Discover how TypeScript adds type safety to your JavaScript projects.",
+          image:
+            "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=500&h=300&fit=crop",
+          date: "Dec 15, 2025",
+          readTime: "5 min read",
+          category: "TypeScript",
+        },
+        {
+          slug: "web-performance-optimization",
+          title: "Web Performance Optimization Tips",
+          excerpt:
+            "Learn essential techniques to make your websites faster and more efficient.",
+          image:
+            "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop",
+          date: "Dec 12, 2025",
+          readTime: "10 min read",
+          category: "Performance",
+        },
+      ];
+
+      // Function to create blog card HTML
+      function createBlogCard(post) {
+        return `
+          <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onclick="navigateToBlog('${post.slug}')">
+            <div class="relative">
+              <img src="${post.image}" alt="${post.title}" class="w-full h-48 object-cover">
+              <span class="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                ${post.category}
+              </span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center text-gray-500 text-sm mb-3">
+                <span>${post.date}</span>
+                <span class="mx-2">•</span>
+                <span>${post.readTime}</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-blue-600 transition-colors">
+                ${post.title}
+              </h3>
+              <p class="text-gray-600 mb-4">
+                ${post.excerpt}
+              </p>
+              <div class="flex items-center text-blue-600 font-semibold">
+                Read More
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </div>
+            </div>
+          </article>
+        `;
+      }
+
+      // Function to navigate to blog post
+      function navigateToBlog(slug) {
+        window.location.href = `/blog/${slug}`;
+      }
+
+      // Render blog posts
+      function renderBlogPosts() {
+        const blogGrid = document.getElementById("blog-grid");
+        blogGrid.innerHTML = blogPosts
+          .map((post) => createBlogCard(post))
+          .join("");
+      }
+
+      // Initialize when DOM is loaded
+      document.addEventListener("DOMContentLoaded", renderBlogPosts);
+    </script>
+  </body>
+</html>
