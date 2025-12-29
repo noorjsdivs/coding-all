@@ -1,17 +1,4 @@
-export interface BlogPost {
-  slug: string;
-  title: string;
-  excerpt: string;
-  content: string;
-  image: string;
-  date: string;
-  readTime: string;
-  category: string;
-  author: string;
-  authorImage: string;
-}
-
-export const blogPosts: BlogPost[] = [
+export const blogPosts = [
   {
     slug: "getting-started-with-react",
     title: "Getting Started with React",
@@ -102,15 +89,11 @@ export const blogPosts: BlogPost[] = [
   },
 ];
 
-export function getBlogPostBySlug(slug: string): BlogPost | undefined {
+export function getBlogPostBySlug(slug) {
   return blogPosts.find((post) => post.slug === slug);
 }
 
-export function getRelatedPosts(
-  slug: string,
-  category: string,
-  limit: number = 3
-): BlogPost[] {
+export function getRelatedPosts(slug, category, limit = 3) {
   const relatedPosts = blogPosts.filter(
     (post) => post.slug !== slug && post.category === category
   );
