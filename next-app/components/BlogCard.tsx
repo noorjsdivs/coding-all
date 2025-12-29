@@ -21,7 +21,7 @@ export default function BlogCard({ post }: BlogCardProps) {
             {post.category}
           </span>
         </div>
-        <div className="p-6 flex flex-col flex-grow">
+        <div className="p-6 flex flex-col grow">
           <div className="flex items-center text-gray-500 text-sm mb-3">
             <span>{post.date}</span>
             <span className="mx-2">•</span>
@@ -30,7 +30,7 @@ export default function BlogCard({ post }: BlogCardProps) {
           <h3 className="text-xl font-bold text-gray-800 mb-3 hover:text-blue-600 transition-colors">
             {post.title}
           </h3>
-          <p className="text-gray-600 mb-4 flex-grow">{post.excerpt}</p>
+          <p className="text-gray-600 mb-4 grow">{post.excerpt}</p>
           <div className="flex items-center text-blue-600 font-semibold">
             Read More
             <svg
